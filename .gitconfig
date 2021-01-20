@@ -1,0 +1,5 @@
+[user]
+	email = jean-philippe@weenect.com
+	name = Jean-Philippe Maligne
+[alias]
+	plz = push --force-with-lease
