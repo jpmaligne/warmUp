@@ -1,3 +1,9 @@
 # warmUp
 
-Contains git config and stuff related to personnal aliases
+Quick init of new debian OS.
+
+Set aliases, install usefull packages, display usefull links.
+
+## Install
+
+`. warm.sh`
