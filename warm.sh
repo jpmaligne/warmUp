@@ -1,6 +1,7 @@
 cp .bash_aliases ~/.bash_aliases &&
 cp .gitconfig ~/.gitconfig &&
 mkdir ~/workspace &&
+sudo apt update
 sudo apt install -y vim git curl &&
 git clone https://github.com/nojhan/liquidprompt.git ~/liquidprompt &&
 echo "[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt" >> ~/.bashrc &&
