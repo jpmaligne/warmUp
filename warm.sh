@@ -7,7 +7,7 @@ echo "[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt" >> ~/.bashrc &&
 source ~/.bashrc &&
 sudo snap install code --classic &&
 sudo snap install node --classic &&
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash &&
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash &&
 touch ~/.ssh/id_rsa &&
 touch ~/.ssh/id_rsa.pub &&
 chmod 600 ~/.ssh/id_rsa &&

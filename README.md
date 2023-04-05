@@ -2,7 +2,7 @@
 
 Quick init of new debian OS.
 
-Set aliases, install usefull packages, display usefull links.
+Set aliases, install useful packages, display useful links.
 
 ## Install
 
