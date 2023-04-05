@@ -1,28 +1,7 @@
 alias wcd='cd ~/workspace/'
-alias wcdapi='wcd && cd api'
-alias wcdworker='wcd && cd worker'
-alias wcddbmodels='wcd && cd dbmodels'
-alias wcdmagento2='wcd && cd magento2'
-alias wcdnotifier='wcd && cd notifier'
-alias wcdmailsync='wcd && cd mail\-sync'
-alias wcdbackendv3='wcd && cd backendv3'
-alias wcdvitrinev2='wcd && cd vitrinev2'
-alias wcddeployment='wcd && cd deployment'
-alias wcduserspace='wcd && cd user\-space'
-alias wcdmockipinfo='wcd && cd mock\-ipinfo'
-alias wcdmockaspider='wcd && cd mock\-aspider'
-alias wcdbackofficev3='wcd && cd backofficev3'
-alias wcdstorelocator='wcd && cd store\-locator'
-alias wcdmailchimpsync='wcd && cd mailchimpsync'
-alias wcdtoplovocommand='wcd && cd toplovocommand'
-
-alias addtests='python manage.py loadfixtures --truncate'
 
 alias dockerrmall='docker rm -f $(docker ps -a -q)'
 alias dkapache='docker run -dit --name `basename $PWD` -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:alpine'
-
-alias pcd='cd ~/private/'
-alias pcdwarmup='pcd && cd warmUp'
 
 alias dc='docker-compose'
 alias dce='docker-compose exec'
@@ -32,3 +11,18 @@ alias kl='minikube kubectl -- logs'
 alias kd='minikube kubectl -- describe'
 alias kgp='minikube kubectl -- get pods'
 alias kgs='minikube kubectl -- get services'
+
+###################################### go ######################################
+go() {
+    cd ~/workspace/$1
+}
+_go_completions()
+{
+    local s1
+    s1=${COMP_WORDS[COMP_CWORD]}
+    if [ $COMP_CWORD -eq 1 ]; then
+        COMPREPLY=( $(compgen -W "\`ls ~/workspace\`" -- $s1) )
+    fi
+    return 0
+}
+complete -F _go_completions go

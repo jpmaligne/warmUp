@@ -3,3 +3,5 @@
 	name = Jean-Philippe Maligne
 [alias]
 	plz = push --force-with-lease
+	update = "!git checkout $1 && git pull #"
+	erase = "!git checkout -- ."
